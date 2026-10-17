@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7-Figures Printers | #1 AI OFM Courses</title>
+<meta name="description" content="The next level of AI OFM education. Learn the strategies. Access the tools. Build your business.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#08080c; --panel:#12121a; --gold:#e6c36e; --gold2:#b8892f; --rosso:#d4132b;
+  --pink:#ff4fa3; --cyan:#37b6ff; --text:#f3eee2; --mute:#a9a49a;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--text);font:17px/1.65 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.02;letter-spacing:-.01em}
+.gold{background:linear-gradient(120deg,#f6e2a8,var(--gold2) 60%,#f6e2a8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-block;padding:15px 30px;border-radius:2px;text-decoration:none;font-weight:700;letter-spacing:.04em;background:linear-gradient(120deg,#f6e2a8,var(--gold2));color:#1a1204;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.12)}
+.btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:24px;font-weight:700}
+.brand img{height:42px;width:auto;display:block}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid #2a2a36}
+.hero .chartbg{position:absolute;inset:0;width:100%;height:100%;opacity:.28;pointer-events:none}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 80% 20%,rgba(255,79,163,.22),transparent),radial-gradient(50% 45% at 10% 80%,rgba(55,182,255,.18),transparent)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:30px 0 40px}
+.hero h1{font-size:clamp(50px,8vw,104px)}
+.hero .sub{font-family:var(--serif);font-style:italic;font-size:28px;margin:18px 0 8px;color:var(--gold)}
+.hero .tag{color:var(--mute);margin-bottom:28px;max-width:42ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.phones{display:flex;gap:18px;justify-content:center;align-items:flex-start}
+.phone{flex:1;max-width:240px;background:linear-gradient(160deg,var(--gold),#3a2c0e);padding:3px;border-radius:30px;box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 40px rgba(230,195,110,.12)}
+.phone:nth-child(2){margin-top:50px}
+.phone .in{background:#000;border-radius:27px;padding:6px}
+.phone video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:22px;display:block;background:#000}
+.phone small{display:block;padding:8px 6px 2px;font-size:13px;color:var(--mute)}
+.carwrap{position:relative;padding-bottom:6px}
+.carwrap svg,.carwrap img{width:100%;max-width:900px;display:block;margin:0 auto}
+.road{height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+
+section{padding:90px 0}
+h2{font-size:clamp(36px,5.2vw,64px);margin-bottom:20px;max-width:18ch}
+.lead{max-width:62ch;color:#d6d0c2;font-size:18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.model{position:relative;aspect-ratio:3/4;border-radius:4px;overflow:hidden;border:1px solid #3a3322;background:var(--panel)}
+.model svg,.model img{width:100%;height:100%;object-fit:cover;display:block}
+.model span{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-family:var(--serif);font-size:22px}
+
+/* Learn list */
+.learn{list-style:none;padding:0;margin-top:30px}
+.learn li{padding:16px 0 16px 34px;border-top:1px solid #2e2e3a;position:relative}
+.learn li:before{content:"";position:absolute;left:0;top:26px;width:16px;height:2px;background:var(--gold)}
+
+/* ComfyUI */
+.comfy{background:#0d0d14;border:1px solid #2a2a3a;border-radius:10px;padding:14px;overflow-x:auto}
+.comfy svg{min-width:640px;width:100%;display:block}
+.node rect.b{fill:#1c1c28;stroke:#3b3b52;stroke-width:1.2}
+.node rect.h{fill:#2a2a40}
+.node text{fill:#e8e4d8;font:600 10px var(--sans)}
+.node .s{fill:#8e8aa0;font-weight:400;font-size:8.5px}
+.wire{fill:none;stroke-width:2;opacity:.9}
+.dash{stroke-dasharray:6 6;animation:flow 1.2s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-12}}
+
+/* Packages */
+.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.pkg{background:var(--panel);border:1px solid #2e2e3a;padding:32px;display:flex;flex-direction:column;gap:14px}
+.pkg.main{border:1px solid var(--gold);background:linear-gradient(180deg,#1b1810,var(--panel));box-shadow:0 0 50px rgba(230,195,110,.1)}
+.pkg h3{font-size:32px}
+.price{font-family:var(--serif);font-size:54px;font-weight:700;color:var(--gold)}
+.pkg ul{padding-left:20px;flex:1;color:#d6d0c2}
+.pkg li{margin:6px 0}
+.pkg .btn{text-align:center}
+.alt{background:#0d0d13;border-block:1px solid #22222d}
+.honest p+p{margin-top:16px}
+.final{text-align:center;background:radial-gradient(60% 80% at 50% 100%,rgba(212,19,43,.25),transparent)}
+.final h2,.final .lead{margin-inline:auto}
+.final .lead{margin-bottom:28px}
+footer{padding:40px 0;border-top:1px solid #2a2a36;font-size:13px;color:var(--mute)}
+footer p{max-width:90ch;margin-top:10px}
+@media(max-width:900px){
+  .hero-grid,.split{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.packages{grid-template-columns:1fr}.phone:nth-child(2){margin-top:0}
+}
+@media(prefers-reduced-motion:reduce){.dash{animation:none}html{scroll-behavior:auto}}
+
+.cars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.car{position:relative;aspect-ratio:16/10;border:1px solid #3a3322;background:radial-gradient(80% 70% at 50% 40%,#23232f,#0a0a0f);overflow:hidden;display:flex;align-items:center}
+.car svg,.car img{width:100%;height:100%;object-fit:cover;display:block}
+.car span{position:absolute;left:14px;bottom:10px;font-family:var(--serif);font-size:22px}
+.testi{display:flex;gap:28px;justify-content:center;align-items:flex-start;flex-wrap:wrap;margin-top:40px}
+.testi .phone{max-width:300px;flex:0 1 300px}
+.testi .phone:nth-child(2){margin-top:0}
+@media(max-width:900px){.cars{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <svg class="chartbg" id="chartbg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+  <div class="wrap">
+    <nav>
+      <div class="brand"><img id="logo" alt="" src="images/logo.svg"><span id="brandName">7-Figures Printers</span></div>
+      <a class="btn ghost" href="#courses">View courses</a>
+    </nav>
+    <div class="hero-grid">
+      <div>
+        <h1 class="gold">7-Figures Printers</h1>
+        <p class="sub">The next level of AI OFM education.</p>
+        <p class="tag">Learn the strategies. Access the tools. Build your business.</p>
+        <div class="cta"><a class="btn" href="#courses">Explore courses</a><a class="btn ghost" href="#learn">What you'll learn</a></div>
+      </div>
+      <div class="phones" id="videos" aria-label="Member testimonies"><figure class="phone"><div class="in"><video controls playsinline preload="metadata" poster="videos/poster-1.jpg"><source src="videos/testimony-1.mp4" type="video/mp4"></video><small>Member testimony</small></div></figure><figure class="phone"><div class="in"><video controls playsinline preload="metadata" poster="videos/poster-2.jpg"><source src="videos/testimony-2.mp4" type="video/mp4"></video><small>Member testimony</small></div></figure></div>
+    </div>
+    <div class="carwrap" id="car"></div>
+  </div>
+  <div class="road"></div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section id="learn">
+  <div class="wrap split">
+    <div>
+      <h2>Everything you need in one place</h2>
+      <p class="lead">Finding reliable information in the AI OFM industry is overwhelming. Between expensive courses, conflicting advice, unreliable tools, and unrealistic promises, it's hard to know who to trust. This platform brings education, mentorship, business packages, and tools together so aspiring entrepreneurs and agency owners can find them in one place.</p>
+      <h3 style="margin-top:40px;font-size:32px">Learn from experienced operators</h3>
+      <p class="lead" style="margin-top:10px">Training and mentorship from business marketers, e-commerce operators, agency owners, and creators with 5–12 years of experience, where verified.</p>
+    </div>
+    <ul class="learn">
+      <li>AI model creation, branding, and positioning</li>
+      <li>Content production and high-quality 4K–8K visual workflows</li>
+      <li>Short-form video for Instagram Reels, TikTok, and YouTube Shorts</li>
+      <li>Audience growth, distribution, and conversion optimization</li>
+      <li>Creator management, agency operations, and team building</li>
+      <li>Monetization, customer retention, and business scaling</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="alt">
+  <div class="wrap">
+    <h2>Build a brand people remember</h2>
+    <p class="lead">Learn how to design AI characters with a distinct look, from hair color and styling to setting and story.</p>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<!-- ============ COMFYUI ============ -->
+<section>
+  <div class="wrap split">
+    <div>
+      <h2>Real ComfyUI workflows</h2>
+      <p class="lead">Practical content workflows for consistent characters and high-quality 4K–8K output: checkpoints, prompts, samplers, upscaling, and export, explained step by step.</p>
+      <p class="lead" style="margin-top:14px;color:var(--mute);font-size:15px">Illustrative node graph.</p>
+    </div>
+    <div class="comfy" aria-label="Example ComfyUI node workflow">
+      <svg viewBox="0 0 700 330" role="img">
+        <g class="wire dash" stroke="#ffd166"><path d="M150 70 C190 70 190 60 230 60"/></g>
+        <g class="wire dash" stroke="#ff4fa3"><path d="M150 85 C190 85 190 160 230 160"/><path d="M150 85 C190 85 190 250 230 250" stroke="#ff7a7a"/></g>
+        <g class="wire dash" stroke="#37b6ff"><path d="M370 60 C420 60 420 100 470 100"/><path d="M370 160 C420 160 420 115 470 115"/><path d="M370 250 C420 250 420 130 470 130"/></g>
+        <g class="wire dash" stroke="#a76bff"><path d="M600 110 C630 110 630 190 520 205" /></g>
+        <g class="node"><rect class="b" x="10" y="40" width="140" height="80" rx="6"/><rect class="h" x="10" y="40" width="140" height="20" rx="6"/><text x="20" y="54">Load Checkpoint</text><text class="s" x="20" y="78">model: luxury_xl.safetensors</text><text class="s" x="20" y="94">vae: auto</text></g>
+        <g class="node"><rect class="b" x="230" y="30" width="140" height="70" rx="6"/><rect class="h" x="230" y="30" width="140" height="20" rx="6"/><text x="240" y="44">Latent Image</text><text class="s" x="240" y="68">3840 x 2160</text></g>
+        <g class="node"><rect class="b" x="230" y="125" width="140" height="70" rx="6"/><rect class="h" x="230" y="125" width="140" height="20" rx="6"/><text x="240" y="139">CLIP Text Encode (+)</text><text class="s" x="240" y="163">pink hair, studio light, 8k</text></g>
+        <g class="node"><rect class="b" x="230" y="215" width="140" height="70" rx="6"/><rect class="h" x="230" y="215" width="140" height="20" rx="6"/><text x="240" y="229">CLIP Text Encode (-)</text><text class="s" x="240" y="253">blurry, low quality</text></g>
+        <g class="node"><rect class="b" x="470" y="80" width="130" height="95" rx="6"/><rect class="h" x="470" y="80" width="130" height="20" rx="6"/><text x="480" y="94">KSampler</text><text class="s" x="480" y="118">steps 30 · cfg 6.5</text><text class="s" x="480" y="134">sampler dpmpp_2m</text><text class="s" x="480" y="150">seed fixed</text></g>
+        <g class="node"><rect class="b" x="470" y="200" width="130" height="70" rx="6"/><rect class="h" x="470" y="200" width="130" height="20" rx="6"/><text x="480" y="214">VAE Decode</text><text class="s" x="480" y="240">→ Upscale → Save</text></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRADING CHART ============ -->
+<section class="alt">
+  <div class="wrap split">
+    <div class="comfy" style="padding:20px">
+      <svg id="chart" viewBox="0 0 640 320" role="img" aria-label="Illustrative growth chart"></svg>
+    </div>
+    <div>
+      <h2>Scale with strategy, not guesswork</h2>
+      <p class="lead">Track what works, cut what doesn't, and grow with clear numbers: audience growth, conversion, retention, and monetization.</p>
+      <p class="lead" style="margin-top:14px;color:var(--mute);font-size:15px">Illustrative chart only. Not real results.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARS ============ -->
+<section>
+  <div class="wrap">
+    <h2>The lifestyle you're building toward</h2>
+    <p class="lead">Supercars are the symbol, but the real goal is a business that runs on systems you understand.</p>
+    <div class="cars" id="cars"></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="alt" id="testimonials">
+  <div class="wrap">
+    <h2>Member testimonials</h2>
+    <p class="lead">Hear from members in their own words. Individual experiences are not typical or guaranteed.</p>
+    <div class="testi" id="testi"><figure class="phone"><div class="in"><video controls playsinline preload="metadata" poster="videos/poster-1.jpg"><source src="videos/testimony-1.mp4" type="video/mp4"></video><small>Member testimony</small></div></figure><figure class="phone"><div class="in"><video controls playsinline preload="metadata" poster="videos/poster-2.jpg"><source src="videos/testimony-2.mp4" type="video/mp4"></video><small>Member testimony</small></div></figure></div>
+  </div>
+</section>
+
+<!-- ============ COURSES ============ -->
+<section id="courses">
+  <div class="wrap">
+    <h2>Courses, mentorship, and packages</h2>
+    <p class="lead">Starting from zero or already running an agency? Pick the package built around your goal.</p>
+    <div class="packages">
+      <article class="pkg"><h3>Starter course</h3><p>Structured lessons and implementation guides for building your first AI OFM business.</p><div class="price" data-price="starter"></div>
+        <ul><li>Structured course and masterclasses</li><li>Practical implementation guides</li><li>Tool recommendations</li></ul><a class="btn" data-buy="starter" href="#">Buy Starter course</a></article>
+      <article class="pkg main"><h3>Full program</h3><p>The complete course plus workflow training and community support.</p><div class="price" data-price="program"></div>
+        <ul><li>Everything in Starter</li><li>ComfyUI and workflow training</li><li>Advanced marketing education</li><li>Community support</li></ul><a class="btn" data-buy="program" href="#">Buy Full program</a></article>
+      <article class="pkg"><h3>1-on-1 mentorship</h3><p>Coaching and business strategy sessions for agency owners ready to scale.</p><div class="price" data-price="mentorship"></div>
+        <ul><li>One-on-one coaching</li><li>Business strategy sessions</li><li>Agency-growth education</li></ul><a class="btn" data-buy="mentorship" href="#">Apply for mentorship</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap split honest">
+    <h2>No fluff. No fake guarantees.</h2>
+    <div class="lead">
+      <p>We believe in transparent education, realistic expectations, and strategies backed by practical experience. Our focus is on what you can understand, implement, test, and improve, not endless theory or empty promises.</p>
+      <p>Some operators in the broader industry report five- or six-figure monthly revenues, and some claim even higher. Those outcomes are not typical or guaranteed. Your results depend on your skills, execution, resources, market conditions, and business decisions.</p>
+      <p>Our mission is to help you build the knowledge and systems to pursue your own goals.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="gold">Learn smarter. Build strategically. Scale with purpose.</h2>
+    <p class="lead">Explore our courses, discover mentorship, and take the next step in your AI OFM journey.</p>
+    <a class="btn" href="#courses">Explore courses</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>7-Figures Printers</b>
+    <p>Testimonials reflect individual experiences and are not typical or guaranteed. Educational content only; not financial, legal, or tax advice. Follow all platform terms, disclosure rules, and laws that apply where you operate, including requirements to disclose AI-generated content. Illustrations are generic artwork and are not affiliated with any car manufacturer.</p>
+    <p>&copy; <span id="y"></span> 7-Figures Printers. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script>
+const S = window.SITE, $ = id => document.getElementById(id);
+
+/* Logo + name */
+$("logo").src = S.logo; $("brandName").textContent = S.brandName;
+
+/* Videos are plain HTML above: to change them edit the <source src> and poster in index.html */
+/* Hero car (generic supercar illustration) */
+$("car").innerHTML = S.heroCarImage ? `<img src="${S.heroCarImage}" alt="Supercar">` : `
+<svg viewBox="0 0 640 170" role="img" aria-label="Supercar illustration">
+  <defs><linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff3b4e"/><stop offset=".55" stop-color="#d4132b"/><stop offset="1" stop-color="#6b0715"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9fd9ff"/><stop offset="1" stop-color="#1b2a44"/></linearGradient></defs>
+  <ellipse cx="320" cy="150" rx="280" ry="8" fill="#000" opacity=".55"/>
+  <path d="M20 118 L32 100 Q70 92 130 84 L200 58 Q260 40 340 42 Q400 44 440 64 L530 80 Q585 88 598 104 L604 122 Z" fill="url(#body)"/>
+  <path d="M212 62 Q265 46 335 48 Q388 50 420 66 L330 74 Z" fill="url(#glass)"/>
+  <path d="M60 106 L560 98" stroke="#fff" stroke-opacity=".35" stroke-width="1.5"/>
+  <path d="M520 98 L585 100" stroke="#ffe9a8" stroke-width="5" stroke-linecap="round"/>
+  <rect x="26" y="104" width="22" height="6" rx="3" fill="#ff8a8a"/>
+  <g><circle cx="140" cy="122" r="28" fill="#0c0c10"/><circle cx="140" cy="122" r="17" fill="#c9a24a"/><circle cx="140" cy="122" r="6" fill="#0c0c10"/>
+  <circle cx="480" cy="122" r="28" fill="#0c0c10"/><circle cx="480" cy="122" r="17" fill="#c9a24a"/><circle cx="480" cy="122" r="6" fill="#0c0c10"/></g>
+</svg>`;
+
+/* Gallery: built-in illustrated portraits unless an image is given */
+const portrait = c => `
+<svg viewBox="0 0 200 270" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs><linearGradient id="bg${c.replace('#','')}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1b2b"/><stop offset="1" stop-color="${c}" stop-opacity=".45"/></linearGradient></defs>
+  <rect width="200" height="270" fill="url(#bg${c.replace('#','')})"/>
+  <path d="M100 30 C40 30 28 90 34 150 C38 200 22 230 30 270 L170 270 C178 230 162 200 166 150 C172 90 160 30 100 30Z" fill="${c}"/>
+  <path d="M30 270 C40 225 70 210 100 210 C130 210 160 225 170 270Z" fill="#0c0c12"/>
+  <path d="M100 210 L84 190 L116 190Z" fill="#e9c4a8"/>
+  <rect x="86" y="165" width="28" height="35" fill="#e9c4a8"/>
+  <ellipse cx="100" cy="115" rx="42" ry="54" fill="#f1cfb4"/>
+  <path d="M56 105 C58 60 90 48 100 48 C112 48 146 62 144 105 C130 80 108 76 90 70 C78 82 66 92 56 105Z" fill="${c}"/>
+  <path d="M78 118 q9 -6 18 0 M106 118 q9 -6 18 0" stroke="#2b1a14" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="87" cy="124" rx="4" ry="2.5" fill="#2b1a14"/><ellipse cx="115" cy="124" rx="4" ry="2.5" fill="#2b1a14"/>
+  <path d="M90 150 Q100 158 110 150 Q100 154 90 150Z" fill="#c4304f"/>
+  <path d="M70 225 L130 225" stroke="#e6c36e" stroke-width="2"/>
+</svg>`;
+S.gallery.forEach(m => {
+  const d = document.createElement("div"); d.className = "model";
+  d.innerHTML = (m.image ? `<img src="${m.image}" alt="${m.name}">` : portrait(m.hair)) + `<span>${m.name}</span>`;
+  $("gallery").appendChild(d);
+});
+
+/* Prices + links */
+document.querySelectorAll("[data-price]").forEach(e => e.textContent = S.prices[e.dataset.price]);
+document.querySelectorAll("[data-buy]").forEach(a => a.href = S.links[a.dataset.buy]);
+$("y").textContent = new Date().getFullYear();
+
+/* Candlesticks (decorative, seeded so it looks the same every load) */
+function candles(svg, w, h, n, opts) {
+  let seed = 7; const r = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  let p = h * .8, out = "", pts = [];
+  const cw = w / n;
+  for (let i = 0; i < n; i++) {
+    const o = p, c = p - (r() - .38) * h * .07; p = c;
+    const hi = Math.min(o, c) - r() * h * .04, lo = Math.max(o, c) + r() * h * .04, up = c < o;
+    const col = up ? opts.up : opts.down, x = i * cw + cw / 2;
+    out += `<line x1="${x}" x2="${x}" y1="${hi}" y2="${lo}" stroke="${col}" stroke-width="1.5"/><rect x="${x - cw * .3}" y="${Math.min(o, c)}" width="${cw * .6}" height="${Math.max(Math.abs(o - c), 2)}" fill="${col}"/>`;
+    pts.push([x, c]);
+  }
+  const grid = [1,2,3,4].map(i => `<line x1="0" x2="${w}" y1="${h*i/5}" y2="${h*i/5}" stroke="#fff" stroke-opacity=".08"/>`).join("");
+  const ma = "M" + pts.map(q => q.join(",")).join(" L");
+  svg.innerHTML = grid + out + (opts.line ? `<path d="${ma}" fill="none" stroke="${opts.line}" stroke-width="2" opacity=".85"/>` : "");
+}
+candles($("chartbg"), 1200, 600, 60, { up: "#e6c36e", down: "#d4132b" });
+candles($("chart"), 640, 320, 34, { up: "#37e0a0", down: "#ff4f6a", line: "#e6c36e" });
+
+document.querySelectorAll("video").forEach(v => v.addEventListener("play", () => document.querySelectorAll("video").forEach(o => o !== v && o.pause())));
+
+/* Cars */
+const carSvg = (style, c) => {
+  const body = style === "wedge"
+   ? `<path d="M20 120 L40 104 L170 82 L300 52 Q350 46 400 62 L560 92 Q598 100 604 118 L608 126 L20 126Z" fill="${c}"/><path d="M300 54 Q350 48 396 64 L470 84 L250 84Z" fill="#101624" opacity=".9"/><path d="M40 106 L580 100" stroke="#fff" stroke-opacity=".35" stroke-width="1.5"/>`
+   : `<path d="M20 122 L32 104 Q70 96 130 88 L200 62 Q260 44 340 46 Q400 48 440 68 L530 84 Q585 92 598 108 L604 126 Z" fill="${c}"/><path d="M212 66 Q265 50 335 52 Q388 54 420 70 L330 78Z" fill="#101624" opacity=".9"/><path d="M60 110 L560 102" stroke="#fff" stroke-opacity=".35" stroke-width="1.5"/>`;
+  return `<svg viewBox="0 0 640 190" aria-hidden="true"><ellipse cx="320" cy="154" rx="280" ry="8" fill="#000" opacity=".6"/>${body}
+  <path d="M520 100 L590 104" stroke="#ffe9a8" stroke-width="5" stroke-linecap="round"/>
+  <g><circle cx="140" cy="126" r="28" fill="#0c0c10"/><circle cx="140" cy="126" r="17" fill="#c9a24a"/><circle cx="140" cy="126" r="6" fill="#0c0c10"/>
+  <circle cx="480" cy="126" r="28" fill="#0c0c10"/><circle cx="480" cy="126" r="17" fill="#c9a24a"/><circle cx="480" cy="126" r="6" fill="#0c0c10"/></g></svg>`;
+};
+(S.cars || []).forEach(k => {
+  const d = document.createElement("div"); d.className = "car";
+  d.innerHTML = (k.image ? `<img src="${k.image}" alt="${k.name}">` : carSvg(k.style, k.color)) + `<span>${k.name}</span>`;
+  $("cars").appendChild(d);
+});
+</script>
+</body>
+</html>
